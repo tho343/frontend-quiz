@@ -1,13 +1,40 @@
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+  font-size: 16px;
+  line-height: 150%;
+
+  font-family: "Rubik", BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
-
+@font-face {
+  font-family: "Rubik";
+  src: url("../assets/fonts/Rubik-VariableFont_wght.ttf");
+}
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+:root{
+  --purple: "#A729F5";
+  --dark-navy: "#313E51";
+  --navy:"#3b4d66";
+  --gray:"#626c7f";
+  --light-blue:"#abc1e1";
+  --light-gray: "#f4f6fa";
+  --green: "#26d782";
+  --red: "#ee5454";
+  --pading:32px;
+}
+.App{
+  padding: 83px 140px ;
+  
+}
+.overlay{
+  background-color: var(--dark-navy);
+  position: fixed;
+  height: 100vh;
+  width: 100%;
 }
