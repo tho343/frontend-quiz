@@ -35,7 +35,7 @@ export default function ThemeSwitcher({
     width: `${Number(size) - 8}px`,
     backgroundColor: "white",
     left: "5px",
-    bottom: "5px",
+    bottom: "4px",
     zIndex: "100",
     borderRadius: "50%",
     transition: "0.4s",

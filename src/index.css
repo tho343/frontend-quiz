@@ -1,14 +1,4 @@
-body {
-  margin: 0;
-  font-size: 16px;
-  line-height: 150%;
 
-  font-family: "Rubik", BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
 @font-face {
   font-family: "Rubik";
   src: url("../assets/fonts/Rubik-VariableFont_wght.ttf");
@@ -18,23 +8,132 @@ code {
     monospace;
 }
 :root{
-  --purple: "#A729F5";
-  --dark-navy: "#313E51";
-  --navy:"#3b4d66";
-  --gray:"#626c7f";
-  --light-blue:"#abc1e1";
-  --light-gray: "#f4f6fa";
-  --green: "#26d782";
-  --red: "#ee5454";
+  --purple: #A729F5;
+  --dark-navy: #313E51;
+  --navy:#3b4d66;
+  --gray:#626c7f;
+  --light-blue:#abc1e1;
+  --light-gray: #f4f6fa;
+  --green: #26d782;
+  --red: #ee5454;
   --pading:32px;
+}
+
+body {
+  margin: 0;
+  font-size: 16px;
+  line-height: 150%;
+background-color: #f4f6fa;
+  font-family: "Rubik", BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 .App{
   padding: 83px 140px ;
   
 }
 .overlay{
-  background-color: var(--dark-navy);
+  
   position: fixed;
   height: 100vh;
   width: 100%;
+}
+.grid{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  margin-top: 140px;
+gap: 30px
+}
+
+.welcome>h1{
+font-size: 64px;
+line-height: 100%;
+margin: 0;
+}
+.welcome>p{
+  color: var(--gray);
+}
+.option, .answer,.btn{
+  background-color: white;
+  
+
+  border-radius: 24px;
+  box-shadow: 0px 16px 40px 0px rgba(143, 160, 193, 0.14);
+transition: 0.4s;
+cursor: pointer;
+margin-bottom: 24px;
+}
+.option:hover, .answer:hover{
+  background-color: #F6E7FF;
+}
+.clicked{
+  border: 3px solid var(--purple)
+}
+header{
+  display: flex;
+  justify-content: space-between;
+}
+.option-content{
+  display: flex;
+  align-items: center;
+  gap: 32px;
+  font-weight: 500;
+  padding: 20px;
+  font-size: 28px;
+
+}
+.alphabet{
+  color: var(--gray);
+  padding: 16px;
+  border-radius: 8px;
+  background-color: var(--light-gray);
+}
+.question{
+  font-size: 36px;
+  line-height: 150%;
+
+}
+.question>p{
+  font-size: 24px;
+}
+.picked{
+  border: solid 2px var(--purple) ;
+}
+.btn{
+  margin-top: 10px;
+  padding: 32px;
+  text-align: center;
+  background-color: var(--purple);
+  color: white;
+  font-size: 28px;
+  border: none;
+  width: 100%;
+}
+button{
+  border: none;
+  width: 100%;
+}
+.score-board >section{
+  gap: 15px;
+  padding: 32px;
+  display: flex;
+  flex-direction: column;
+  border-radius: 15px;
+  align-items: center;
+  background-color: white;
+}
+.score{
+  font-weight: 700;
+  font-size: 65px;
+}
+.green{
+  border: solid 2px var(--green);
+}
+.red{
+  border: solid 2px var(--red);
+}
+progress{
+  color: #A729F5;
 }
