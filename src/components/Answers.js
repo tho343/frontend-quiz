@@ -14,11 +14,13 @@ export default function Answers({
     setPickedAnswer(answer);
   }
   function handleSubmit() {
+    if (!pickedAnswer) return;
     setIsSubmit(true);
     dispatch({ type: "submitAnswer", payload: pickedAnswer });
   }
   function handleNext() {
     setIsSubmit(false);
+    setPickedAnswer(null);
     dispatch({ type: "nextQuestion" });
   }
   function handleFinish() {
